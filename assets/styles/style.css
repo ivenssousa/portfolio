@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
+:root {
+    /* Cores */
+    --primary-color: #1a1a1a;
+    --secondary-color: #ffffff;
+    /* Font-family Inter */
+    --inter-h1: 2.75rem;
+    --inter-h2: 2rem;
+    --inter-h3: 1.625rem;
+    --inter-body: 1.25rem;
+    /* Font-family Libre */
+    --libre-baskerville: "Libre Baskerville", serif;
+    --libre-h1: 2.5rem;
+    --libre-h2: 1.5rem;
+    --libre-h3: 1.375rem;
+    --libre-body: 1.125rem;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -11,9 +28,9 @@ html {
 }
 
 body {
-    background-color: #1a1a1a;
-    font-family: 'Libre-Baskerville', serif;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    font-family: var(--libre-baskerville);
+    color: var(--secondary-color);
     max-width: 1160px;
     margin-left: auto;
     margin-right: auto;
@@ -35,11 +52,14 @@ a {
     align-items: center;
     padding-top: 30px;
     gap: 20px;
+    text-transform: uppercase;
 }
 
 .menu li:first-child {
     margin-right: auto;
-    font-size: 2.5rem;
+    font-size: var(--libre-h1);
+    font-weight: 700;
+    text-transform: none;
 }
 
 .about {
@@ -56,14 +76,15 @@ a {
 }
 
 .about h2 {
-    font-size: 2.5rem;
+    font-size: var(--libre-h1);
     grid-column: 2;
     align-self: end;
 }
 
 .about p {
     grid-column: 2;
-    font-size: 1.25rem;
+    font-size: var(--libre-body);
+    padding-top: 20px;
 }
 
 .projects {
@@ -73,7 +94,7 @@ a {
 }
 
 .projects h2 {
-    font-size: 40px;
+    font-size: var(--libre-h1);
 }
 
 .image-container {
